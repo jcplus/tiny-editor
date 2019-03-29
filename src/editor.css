@@ -1,0 +1,306 @@
+.te-editor,
+.te-editor * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.te-editor,
+.te-editor .te-editor-button-multiple-values,
+.te-editor .te-editor-button-value {
+    font-family: Arial, Helvetica, tahoma, verdana, 'Microsoft YaHei', '华文细黑', 'STXihei', '宋体', 'SimSun', sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.te-editor {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+    height: 100%;
+    width: 100%;
+}
+
+.te-editor .te-toolbar,
+.te-editor .te-tool-btn {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.te-editor .te-input,
+.te-editor button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 11pt;
+    line-height: 26px;
+    outline: none;
+    padding: 0 12px;
+}
+
+.te-editor .te-input {
+}
+
+.te-editor button {
+}
+
+.te-editor .te-toolbar {
+    position: relative;
+    background-color: #fff;
+    color: #282828;
+}
+
+.te-editor .te-tool-btn {
+    position: relative;
+    /* border-right: 1px solid #eee; */
+    color: #5a5a5a;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.te-editor .te-tool-btn:hover {
+    color: #282828;
+}
+
+.te-editor .te-image-form,
+.te-editor .te-editor-button-multiple-values,
+.te-editor .te-link-value-form {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -10px);
+    -moz-transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
+    -webkit-transition: opacity .2s, transform .2s, visibility .2s;
+    -moz-transition: opacity .2s, transform .2s, visibility .2s;
+    transition: opacity .2s, transform .2s, visibility .2s;
+    visibility: hidden;
+    z-index: 5000;
+}
+
+.te-editor .te-editor-button-multiple-values {
+    background-color: transparent;
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+
+.te-editor .te-toolbar.show-image-form .te-image-form,
+.te-editor .te-toolbar.show-link-form .te-link-value-form,
+.te-editor .te-tool-btn.show-values .te-editor-button-multiple-values {
+    opacity: 1;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-transition: opacity .2s, transform .2s, visibility 0;
+    -moz-transition: opacity .2s, transform .2s, visibility 0;
+    transition: opacity .2s, transform .2s, visibility 0;
+    visibility: visible;
+}
+
+.te-editor-button-multiple-values .te-editor-button-value {
+    background-color: #fafafa;
+    color: #878787;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.te-editor-button-multiple-values .te-editor-button-value:hover {
+    background-color: #e0e0e0;
+    color: #282828;
+}
+
+.te-editor-button-multiple-values .te-editor-button-value:last-child,
+.te-link-value-form {
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.te-editor .te-textarea {
+    background-color: #282828;
+    color: #fafafa;
+    height: calc(100% - 40px);
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.te-editor .te-image-form,
+.te-editor .te-link-value-form {
+    background-color: #fff;
+    cursor: default;
+    padding: 10px;
+    width: 200px;
+}
+
+.te-editor .te-link-value-form .te-input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.te-editor .te-link-value-form .te-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.te-editor .te-link-value-form button:not(:first-child) {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'tiny-editor';
+  src: url('./font/tiny-editor.eot?81467093');
+  src: url('./font/tiny-editor.eot?81467093#iefix') format('embedded-opentype'),
+       url('./font/tiny-editor.woff2?81467093') format('woff2'),
+       url('./font/tiny-editor.woff?81467093') format('woff'),
+       url('./font/tiny-editor.ttf?81467093') format('truetype'),
+       url('./font/tiny-editor.svg?81467093#tiny-editor') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'tiny-editor';
+    src: url('../font/tiny-editor.svg?81467093#tiny-editor') format('svg');
+  }
+}
+*/
+
+ [class^="te-icon-"]:before, [class*=" te-icon-"]:before {
+  font-family: "tiny-editor";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.te-icon-bold:before { content: '\e800'; } /* '' */
+.te-icon-italic:before { content: '\e801'; } /* '' */
+.te-icon-text-height:before { content: '\e802'; } /* '' */
+.te-icon-text-width:before { content: '\e803'; } /* '' */
+.te-icon-font:before { content: '\e804'; } /* '' */
+.te-icon-align-left:before { content: '\e805'; } /* '' */
+.te-icon-align-center:before { content: '\e806'; } /* '' */
+.te-icon-align-right:before { content: '\e807'; } /* '' */
+.te-icon-align-justify:before { content: '\e808'; } /* '' */
+.te-icon-image:before { content: '\e809'; } /* '' */
+.te-icon-indent-left:before { content: '\e80a'; } /* '' */
+.te-icon-indent-right:before { content: '\e80b'; } /* '' */
+.te-icon-cut:before { content: '\e80c'; } /* '' */
+.te-icon-undo:before { content: '\e80d'; } /* '' */
+.te-icon-redo:before { content: '\e80e'; } /* '' */
+.te-icon-video:before { content: '\e80f'; } /* '' */
+.te-icon-upload:before { content: '\e810'; } /* '' */
+.te-icon-trash:before { content: '\e811'; } /* '' */
+.te-icon-link:before { content: '\e812'; } /* '' */
+.te-icon-copy:before { content: '\f0c5'; } /* '' */
+.te-icon-list-unordered:before { content: '\f0ca'; } /* '' */
+.te-icon-list-ordered:before { content: '\f0cb'; } /* '' */
+.te-icon-strike:before { content: '\f0cc'; } /* '' */
+.te-icon-underline:before { content: '\f0cd'; } /* '' */
+.te-icon-table:before { content: '\f0ce'; } /* '' */
+.te-icon-paste:before { content: '\f0ea'; } /* '' */
+.te-icon-quote-left:before { content: '\f10d'; } /* '' */
+.te-icon-unlink:before { content: '\f127'; } /* '' */
+.te-icon-superscript:before { content: '\f12b'; } /* '' */
+.te-icon-subscript:before { content: '\f12c'; } /* '' */
+.te-icon-header:before { content: '\f1dc'; } /* '' */

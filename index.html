@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editor</title>
+    <link rel="stylesheet" href="src/editor.css">
+</head>
+<style media="screen">
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#editor-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 800px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+</style>
+<body>
+    <div id="editor-1"></div>
+</body>
+<script src="src/tiny-util.js" charset="utf-8"></script>
+<script src="src/tiny-lingual.js" charset="utf-8"></script>
+<script src="src/tiny-editor.js" charset="utf-8"></script>
+<script type="text/javascript">
+var externalExitorConfig = {
+    draggable: true
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    var container = qs('#editor-1'),
+        e1 = new TinyEditor('#editor-1', externalExitorConfig);
+
+
+    e1.on('initialised', function (editor) {
+        console.log('editor initialised');
+    });
+});
+</script>
+</html>
